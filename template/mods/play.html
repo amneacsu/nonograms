@@ -1,0 +1,29 @@
+<section class="bubble">
+	<header>{name}</header>
+
+	<hr/>
+
+	<div class="aim">
+		<article id="game" class="hidden">
+			<abbr name="pid">{pid}</abbr>
+			<section id="preview"></section>
+			<section class="top"></section><br/>
+			<section class="left"></section>
+			<section class="grid"></section>
+		</article>
+	</div>
+
+	<hr/>
+
+	<article id="gameinfo">
+		<label>Created by</label>
+		<a href="/user/{author}/">{author}</a>
+	</article>
+
+</section>
+
+<script type="text/javascript">
+$().ready(function() {
+	game.init('play',{width},{height},{data});
+});
+</script>

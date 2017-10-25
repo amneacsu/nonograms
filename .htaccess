@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+
+	RewriteRule ^([a-z]*?)\/?$ index.php?mod=$1&request=
+	RewriteRule ^([a-z]*?)\/([a-z-0-9]*?)\/?$ index.php?mod=$1&request=$2
+</IfModule>

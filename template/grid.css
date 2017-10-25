@@ -1,0 +1,127 @@
+.solved {
+	color:#AAA;
+	font-size:8px !important;
+	line-height:15px;
+}
+
+#game {
+	font-size:0;
+	display:inline-block;
+	padding:10px;
+	white-space:nowrap;
+	position:relative;
+}
+
+#game.hidden {
+	display:none;
+}
+
+#game abbr {
+	display:none;
+}
+
+#game span {
+	text-align:center;
+	font-size:12px;
+	width:16px;
+	height:16px;
+	vertical-align:top;
+}
+
+#game section.top, #game section.left {
+	display:inline-block;
+	white-space:nowrap;
+	vertical-align:top;
+}
+
+
+#game section.top {
+	border-width:1px;
+	border-style:solid;
+	border-color:#666666;
+	background-image:url('images/grid-top.png');
+	background-position:left bottom;
+}
+
+#game section.left {
+	border-width:1px;
+	border-style:solid;
+	border-color:#666666;
+	background-image:url('images/grid-left.png');
+	background-position:right top;
+}
+
+#game nav {
+	vertical-align:top;
+}
+
+#game .top nav {
+	display:inline-block;
+	margin:0 1px 0 0;
+}
+
+#game .left nav {
+	display:block;
+	margin:0 0 1px 0;
+}
+
+#game .top nav span {
+	display:block;
+	margin:1px 0 0;
+}
+
+#game .left nav span {
+	display:inline-block;
+	margin:0 0 0 1px;
+}
+
+
+
+
+#preview {
+	position:relative;
+	border-color:#666;
+	border-style:solid;
+	border-width:0 1px 1px 0;
+	display:inline-block;
+	vertical-align:top;
+	margin:1px 0 0 1px;
+}
+
+#preview canvas {
+	position:absolute;
+	right:2px;
+	bottom:2px;
+	border:#999 1px solid;
+	background-color:#FFF;
+}
+
+
+.grid {
+	background-image:url('images/grid-center.png');
+	display:inline-block;
+	white-space:normal;
+
+	border-color:#666;
+	border-style:solid;
+	border-width:1px;
+}
+
+.grid span {
+	margin:0 1px 1px 0;
+	display:inline-block;
+	background-image:url('images/pip.png');
+	background-repeat:no-repeat;
+}
+
+.grid span.state0 {
+	background-position:left top;
+}
+
+.grid span.state1 {
+	background-position:left center;
+}
+
+.grid span.state2 {
+	background-position:left bottom;
+}

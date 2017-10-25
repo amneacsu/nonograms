@@ -1,0 +1,41 @@
+<div>
+	<a href="" rel="login">Log in</a> /
+	<a href="" rel="register">Register</a>
+</div>
+
+<form method="post" action="/post.php" id="loginForm">
+	<input type="hidden" name="mod" value="users"/>
+	<input type="hidden" name="op" value="login"/>
+
+	<label>Username</label>
+	<input type="text" name="nn_username"/>
+
+	<label>Password</label>
+	<input type="password" name="nn_password"/>
+
+	<br/>
+
+	<input type="submit" value="Log in"/>
+</form>
+
+
+<form method="post" action="/post.php" id="registerForm">
+	<input type="hidden" name="mod" value="users"/>
+	<input type="hidden" name="op" value="register"/>
+
+	<label>Username</label>
+	<input type="text" name="nn_username"/>
+
+	<label>Password</label>
+	<input type="password" name="nn_password2"/>
+
+	<label>Repeat password</label>
+	<input type="password" name="nn_password1"/>
+
+	<label>E-mail address</label>
+	<input type="text" name="nn_email"/>
+
+	<br/>
+
+	<input type="submit" value="Register"/>
+</form>

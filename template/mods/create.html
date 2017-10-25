@@ -1,0 +1,72 @@
+<section class="bubble">
+	<header>{header}</header>
+	<hr/>
+
+	<div class="aim">
+		<article id="game" class="hidden">
+			<abbr name="mode">create</abbr>
+			<section id="preview"></section>
+			<section class="top"></section><br/>
+			<section class="left"></section>
+			<section class="grid"></section>
+		</article>
+	</div>
+
+	<hr/>
+
+	<form method="post" action="/post.php" id="createForm" class="horizontal">
+		<input type="hidden" name="mod" value="grids"/>
+		<input type="hidden" name="op" value="{op}"/>
+		<input type="hidden" name="data" value=""/>
+		<input type="hidden" name="pid" value="{pid}"/>
+
+		<fieldset>
+			<article>
+				<label>Name</label>
+				<input type="text" name="name" placeholder="Name your grid" size="32" value="{name}"/>
+			</article>
+
+			<article>
+				<label>Size</label>
+				<select name="size">
+					<option value="5">Tiny (5x5)</option>
+					<option value="10">Small (10x10)</option>
+					<option value="15" selected>Medium (15x15)</option>
+					<option value="20">Large (20x20)</option>
+					<option value="25">Huge (25x25)</option>
+				</select>
+			</article>
+
+			<article>
+				<input type="submit" value="Save grid"/>
+			</article>
+		</fieldset>
+
+	</form>
+</section>
+
+<script type="text/javascript">
+$().ready(function() {
+
+
+	var $form=$('#createForm');
+
+	if ($form.find('input[name=op]').val()=='edit') {
+		$('#createForm select').attr('disabled',true).val({size});
+		game.init('create',{size},{size},{data});
+	} else {
+
+		$('#createForm select').change(function() {
+			var x=$(this).val()-0;
+			game.init('create',x,x,[]);
+			return false;
+		}).trigger('change');
+
+	}
+
+	$('#createForm').submit(function() {
+		$(this).find('input[name=data]').val(game.data);
+	});
+
+});
+</script>

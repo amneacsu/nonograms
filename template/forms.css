@@ -1,0 +1,89 @@
+label {
+	display:block;
+	margin:0 0 3px;
+	text-shadow:1px 1px 0 #FFF;
+	font-weight:bold;
+	text-align:left;
+}
+
+form {
+	margin:0;
+	padding:0;
+}
+
+fieldset {
+	margin:0 0 10px;
+	border:0;
+	padding:10px 20px;
+}
+
+fieldset article {
+	display:inline-block;
+	margin:0 0 0 20px;
+}
+
+form hr {
+	border:0;
+	margin:0;
+	border-top:#FFF 1px solid;
+	border-bottom:#E6E2DE 1px solid;
+}
+
+input[type=text], input[type=password], select {
+	border:#A99A8B 1px solid;
+	background-color:#FFF;
+	padding:5px;
+	font-size:13px;
+	margin:0 0 5px;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+}
+
+input.invalid {
+	border-color:#FF3333;
+}
+
+
+input[type=submit], input[type=button], input[type=reset] {
+	background-color:#827364;
+
+	border:0;
+	color:#F2EBE3;
+	padding:4px 20px;
+
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+
+	cursor:pointer;
+}
+
+input[type=submit]:disabled, input[type=button]:disabled, input[type=reset]:disabled {
+	background-color:#DDD !important;
+	color:#999;
+	text-shadow:1px 1px #FFF;
+}
+
+
+input[type=submit]:hover, input[type=button]:hover, input[type=reset]:hover,
+input[type=submit]:focus, input[type=button]:focus, input[type=reset]:focus {
+	background-color:#665746;
+}
+
+
+form.horizontal fieldset {
+	padding:10px 20px 0 0;
+}
+
+input.rating {
+	padding:0;
+	height:16px;
+	width:80px;
+	border:0;
+	margin:0;
+	background-color:transparent;
+	color:transparent;
+	background-image:url('images/ratings.png');
+	background-repeat:no-repeat;
+}

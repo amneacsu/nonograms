@@ -1,0 +1,49 @@
+<section class="bubble">
+	<header>Browse grids</header>
+	
+	<hr/>
+
+	<section id="filters">
+		<form class="horizontal">
+			<fieldset>
+				<article>
+					<label>Size</label>
+					<select name="filter_size">
+						<option value="1" selected>Any</option>
+						<option value="5">Tiny (5x5)</option>
+						<option value="10">Small (10x10)</option>
+						<option value="15">Medium (15x15)</option>
+						<option value="20">Large (20x20)</option>
+						<option value="25">Huge (25x25)</option>
+					</select>
+				</article>
+
+				<article>
+					<label>Creator</label>
+					<input type="text" name="filter_username"/>
+				</article>
+
+			</fieldset>
+		</form>
+	</section>
+
+	<hr/>
+
+	<section id="list">
+		<table cellspacing="0">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Size</th>
+					<th>Rating</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+	{list}
+			</tbody>
+		</table>
+	</section>
+
+</section>
